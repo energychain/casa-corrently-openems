@@ -4,6 +4,10 @@ Casa Corrently connected to OpenEMS
 ![npm](https://img.shields.io/npm/dw/casa-corrently-openems) [![Build Status](https://travis-ci.com/energychain/casa-corrently-openems.svg?branch=master)](https://travis-ci.com/energychain/casa-corrently-openems) [![Code Quality](https://www.code-inspector.com/project/12872/score/svg)](https://frontend.code-inspector.com/public/project/12872/casa-corrently-openems/dashboard) [![chat](https://img.shields.io/badge/chat-support-brightgreen)](https://tawk.to/chat/5c53189451410568a109843f/default)
 
 
+## QuickStart
+You might deploy your personal test environment easily using [this Heroku deployment template](
+https://heroku.com/deploy?template=https://github.com/energychain/casa-corrently-openems).
+
 ## Installation
 
 ### Prerequisites
