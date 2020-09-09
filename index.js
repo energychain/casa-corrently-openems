@@ -12,7 +12,7 @@ const _openems_last = async function(node) {
     ]
     }
   }
-
+  try {
   let result = await axios.post("https://fenecon.de/fems/rest/jsonrpc",postdata,{
                  auth: {
                    username: node.config.openems_username,
@@ -21,6 +21,10 @@ const _openems_last = async function(node) {
   result = result.data;
 
   return result;
+  } catch(e) {
+    console.log(e);
+    return;
+  }
 }
 
 const _openems_history = async function(node,from,to,resolution) {
@@ -56,6 +60,7 @@ const _openems_history = async function(node,from,to,resolution) {
   return result.result.payload.result;
   } catch(e) {
     console.log(e);
+    return;
   }
 }
 

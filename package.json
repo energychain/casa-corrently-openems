@@ -1,10 +1,11 @@
 {
   "name": "casa-corrently-openems",
-  "version": "1.0.0",
+  "version": "0.5.0",
   "description": "Casa Corrently connected to OpenEMS",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "npm install; node standalone.js"
   },
   "repository": {
     "type": "git",
