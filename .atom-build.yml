@@ -3,7 +3,7 @@ targets:
   docker-build:
     cmd: "docker build -t stromdao/casa-corrently-openems ."
   docker-run:
-    cmd: "docker run --name casa-corrently-openems -p 8081:3000 -v ./configs:/configs -d stromdao/casa-corrently development.json"
+    cmd: "docker run --name casa-corrently-openems -p 8081:3000 -d stromdao/casa-corrently-openems development.json"
   docker-push:
     cmd: "docker push stromdao/casa-corrently-openems"
   docker-create-service:
