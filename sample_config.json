@@ -1,6 +1,6 @@
 {
    "type":"OpenEMS Measurement Channel",
-   "name":"Corrently Demozähler",
+   "name":"OpenEMS Demo (Prosumer)",
    "firstReading":0,
    "firstReadingOut":0,
    "firstReadingDate":"2019-09-05",
@@ -23,5 +23,6 @@
    "zip":"94469",
    "scaleFactor": 10000000,
    "community": "OpenEMS",
-   "uuid":"dev_fems"
+   "uuid":"dev_fems",
+   "publisher":"casa-corrently-ipfs-edge"
 }

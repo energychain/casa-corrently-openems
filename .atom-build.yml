@@ -1,1 +1,12 @@
 cmd: git add -A ; git commit -m "Auto Commit" -a ; git push origin master ; npm publish
+targets:
+  docker-build:
+    cmd: "docker build -t stromdao/casa-corrently-openems ."
+  docker-run:
+    cmd: "docker run --name casa-corrently-openems -p 8081:3000 -v ./configs:/configs -d stromdao/casa-corrently development.json"
+  docker-push:
+    cmd: "docker push stromdao/casa-corrently-openems"
+  docker-create-service:
+    cmd: "docker service create --name casa-corrently-openems -p 8081:3000 --config casa-corrently-docker stromdao/casa-corrently"
+  docker-rm-service:
+    cmd: "docker service rm casa-corrently-openems"
