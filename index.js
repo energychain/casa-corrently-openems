@@ -145,20 +145,15 @@ module.exports = {
           }
         }
 
-        responds.push({
-            time: from,
-            values: {
-              energy: Math.round(result.data[fieldin][startIdx] * scaleFactor),
-              energyOut: Math.round(result.data[fieldout][startIdx] * scaleFactor)
-            }
-        });
-        responds.push({
-            time: to,
-            values: {
-              energy: Math.round(result.data[fieldin][endIdx] * scaleFactor),
-              energyOut: Math.round(result.data[fieldout][endIdx] * scaleFactor)
-            }
-        });
+        for(let i=startIdx;i<=endIdx;i++) {
+          responds.push({
+              time: new Date(result.timestamps[i]).getTime(),
+              values: {
+                energy: Math.round(result.data[fieldin][i] * scaleFactor),
+                energyOut: Math.round(result.data[fieldout][i] * scaleFactor)
+              }
+          });
+        }
         resolve(responds);
       }
     });

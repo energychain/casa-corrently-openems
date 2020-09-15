@@ -5,7 +5,6 @@ COPY package*.json ./
 COPY sample_config.json ./
 USER node
 RUN npm install
-RUN npm install --save casa-corrently-ipfs-edge
 COPY --chown=node:node . .
 EXPOSE 3000
-CMD [ "npm", "start","/casa-corrently-docker" ]
+CMD [ "node", "app.js" ]
