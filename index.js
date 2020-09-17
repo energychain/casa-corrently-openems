@@ -8,7 +8,8 @@ const _openems_last = async function(node) {
       "channels": [
       "_sum/GridBuyActiveEnergy",
       "_sum/GridSellActiveEnergy",
-      "_sum/ProductionActiveEnergy"
+      "_sum/ProductionActiveEnergy",
+      "_sum/GridActivePower"
     ]
     }
   }
@@ -90,7 +91,8 @@ module.exports = {
                 time: new Date().getTime(),
                 values: {
                   energy: Math.round(result[fieldin] * scaleFactor),
-                  energyOut: Math.round(result[fieldout] * scaleFactor)
+                  energyOut: Math.round(result[fieldout] * scaleFactor),
+                  power:result["_sum/GridActivePower"] * 1000
                 }
             };
             resolve(responds);

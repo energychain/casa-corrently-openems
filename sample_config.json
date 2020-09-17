@@ -1,6 +1,6 @@
 {
    "type":"OpenEMS Measurement Channel",
-   "name":"OpenEMS Demo (Prosumer)",
+   "name":"OpenEMS Development (Prosumer)",
    "firstReading":0,
    "firstReadingOut":0,
    "firstReadingDate":"2019-09-05",
@@ -22,6 +22,7 @@
    "prodMeterId":"_sum/ProductionActiveEnergy",
    "zip":"94469",
    "scaleFactor": 10000000,
+   "powerScaleFactor": 1,
    "community": "OpenEMS",
    "uuid":"dev_fems",
    "publisher":"casa-corrently-ipfs-edge"
