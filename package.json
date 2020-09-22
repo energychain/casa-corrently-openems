@@ -1,6 +1,6 @@
 {
   "name": "casa-corrently-openems",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "description": "Casa Corrently connected to OpenEMS",
   "main": "index.js",
   "scripts": {
@@ -27,8 +27,8 @@
   "homepage": "https://www.stromdao.de/casa",
   "dependencies": {
     "axios": "^0.20.0",
-    "casa-corrently": "^1.0.19",
-    "casa-corrently-ipfs-edge": "^1.0.26",
+    "casa-corrently": "^1.0.21",
+    "casa-corrently-ipfs-edge": "^1.0.27",
     "mocha": "^8.1.3",
     "nodemon": "^2.0.4",
     "simple-dependencies-updater": "^0.9.4"
