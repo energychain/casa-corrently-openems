@@ -1,6 +1,6 @@
 {
   "name": "casa-corrently-openems",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "description": "Casa Corrently connected to OpenEMS",
   "main": "index.js",
   "scripts": {
