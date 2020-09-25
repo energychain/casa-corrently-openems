@@ -10,3 +10,5 @@ targets:
     cmd: "docker service create --name casa-corrently-openems -p 8081:3000 --config casa-corrently-docker stromdao/casa-corrently"
   docker-rm-service:
     cmd: "docker service rm casa-corrently-openems"
+  demo-deploy-docker:
+    cmd: "docker build -t stromdao/casa-corrently-openems .; docker push casa-corrently-openems"
