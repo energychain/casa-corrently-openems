@@ -25,5 +25,6 @@
    "powerScaleFactor": 1,
    "community": "OpenEMS",
    "uuid":"dev_fems",
-   "publisher":"casa-corrently-ipfs-edge"
+   "publisher":"casa-corrently-ipfs-edge",
+   "bridge":"casa-corrently-ipfs-bridge"
 }
