@@ -11,4 +11,4 @@ targets:
   docker-rm-service:
     cmd: "docker service rm casa-corrently-openems"
   demo-deploy-docker:
-    cmd: "docker build -t stromdao/casa-corrently-openems .; docker push stromdao/casa-corrently-openems"
+    cmd: "docker build -t stromdao/casa-corrently-openems .; docker push stromdao/casa-corrently-openems; ssh root@l2.stromdao.de /opt/casa-docker/restart_openems.sh"

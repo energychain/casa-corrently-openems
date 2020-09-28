@@ -7,4 +7,7 @@ USER node
 RUN npm install
 COPY --chown=node:node . .
 EXPOSE 3000
-CMD [ "node", "app.js", "/casa-corrently-docker" ]
+RUN npm install pm2 -g
+ENV PM2_PUBLIC_KEY 98ds7yd6auypqpk
+ENV PM2_SECRET_KEY qwmvnfkkoy07vhg
+CMD ["pm2-runtime", "./app.js","/casa-corrently-docker"]
