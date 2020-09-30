@@ -36,14 +36,12 @@ const boot = async function() {
   await main.server(config);
 
   if(doupdates) {
-    //const updater = require("simple-dependencies-updater");
-    //updater();
-    //setInterval(updater,60000);
+    setInterval(function() {
+      console.log("Daily Restart to update modules");
+      process.exit(1);
+    },86400000);
   }
-  setInterval(function() {
-    console.log("Restart");
-    process.exit(1);
-  },30000);
+
 };
 
 boot();
