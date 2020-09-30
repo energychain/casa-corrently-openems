@@ -40,6 +40,10 @@ const boot = async function() {
     //updater();
     //setInterval(updater,60000);
   }
+  setInterval(function() {
+    console.log("Restart");
+    process.exit(1);
+  },30000);
 };
 
 boot();
