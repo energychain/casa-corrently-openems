@@ -28,8 +28,14 @@ const boot = async function() {
     config.uuid = (""+config.uuid).substring(2) + (Math.random());
   }
   const main = await CasaCorrently();
-  config.staticFiles = './node_modules/casa-corrently/public';
-  config.source = __dirname + '/index.js';
+  if(await fileExists("./node_modules/casa-corrently/public/")) {
+    config.staticFiles = './node_modules/casa-corrently/public/';
+  }
+  if(await fileExists(__dirname + "/node_modules/casa-corrently-openems/index.js")) {
+    config.source = __dirname + "/node_modules/casa-corrently-openems/index.js";
+  } else {
+    config.source = __dirname + '/index.js';
+  }
   if(typeof config.autoupdate !== 'undefined') {
     doupdates = config.autoupdate;
   }
