@@ -1,5 +1,7 @@
 cmd: git add -A ; git commit -m "Auto Commit" -a ; git push origin master ; npm publish
 targets:
+  npm-update:
+    cmd: "npm update"
   docker-build:
     cmd: "docker build -t stromdao/casa-corrently-openems ."
   docker-run:
