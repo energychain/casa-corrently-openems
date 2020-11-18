@@ -124,7 +124,7 @@ module.exports = {
       if(to-from>86400*120) resolution=900*24;
       let result = await _openems_history(node,from,to,resolution);
 
-      if(result.timestamps.length < 2) {
+      if((typeof result !== 'undefined') || (result.timestamps.length < 2)) {
         resolve([]);
       } else {
         let responds = [];
